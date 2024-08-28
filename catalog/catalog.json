@@ -1,0 +1,11 @@
+{
+    "name": "My Custom Catalog",
+    "location": "https://github.com/Bibi40k/mytruecharts/catalog",
+    "trains": {
+        "stable": {
+            "name": "stable",
+            "location": "https://github.com/Bibi40k/mytruecharts/charts/stable",
+            "icon": "https://github.com/Bibi40k/mytruecharts/charts/icon.png"
+        }
+    }
+}
