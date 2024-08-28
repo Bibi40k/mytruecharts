@@ -10,7 +10,7 @@ entries:
       truecharts.org/train: stable
     apiVersion: v2
     appVersion: 1.40.5.8897
-    created: "2024-08-28T13:48:51.208237+03:00"
+    created: "2024-08-28T14:35:10.472934+03:00"
     dependencies:
     - name: common
       repository: oci://tccr.io/truecharts
@@ -34,7 +34,6 @@ entries:
     - https://github.com/truecharts/charts/tree/master/charts/stable/plex
     type: application
     urls:
-    # - https://bibi40k.github.io/mytruecharts/charts/plex-19.1.6.tgz
-    - https://github.com/Bibi40k/mytruecharts/blob/master/charts/plex-19.1.6.tgz
+    - https://raw.githubusercontent.com/Bibi40k/mytruecharts/master/charts/plex-19.1.6.tgz
     version: 19.1.6
-generated: "2024-08-28T13:48:51.203268+03:00"
+generated: "2024-08-28T14:35:10.469316+03:00"
