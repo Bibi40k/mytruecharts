@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  plex:
+  - annotations:
+      max_scale_version: 24.04.1
+      min_scale_version: 24.04.0
+      truecharts.org/category: media
+      truecharts.org/max_helm_version: "3.15"
+      truecharts.org/min_helm_version: "3.11"
+      truecharts.org/train: stable
+    apiVersion: v2
+    appVersion: 1.40.5.8897
+    created: "2024-08-28T13:48:51.208237+03:00"
+    dependencies:
+    - name: common
+      repository: oci://tccr.io/truecharts
+      version: 24.1.5
+    description: Plex Media Server
+    digest: 6244e8eaa537a3bea714f42873947fcccc0a83eb4dd93c6dbfc99db6edbdb8d9
+    home: https://truecharts.org/charts/stable/plex
+    icon: https://truecharts.org/img/hotlink-ok/chart-icons/plex.webp
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: info@truecharts.org
+      name: TrueCharts
+      url: https://truecharts.org
+    name: plex
+    sources:
+    - https://ghcr.io/onedr0p/plex
+    - https://github.com/k8s-at-home/container-images/pkgs/container/plex
+    - https://github.com/truecharts/charts/tree/master/charts/stable/plex
+    type: application
+    urls:
+    - https://bibi40k.github.io/mytruecharts/plex-19.1.6.tgz
+    version: 19.1.6
+generated: "2024-08-28T13:48:51.203268+03:00"

@@ -5,7 +5,6 @@
 *.iso
 __pycache__
 *.xml
-*.pyc
 .cache
 .pytest_cache
 config.py
@@ -44,15 +43,13 @@ private_values.yaml
 temp/
 charts/library/common-test/charts/
 .cr-release-packages/
-charts/**/charts/*.tgz
-charts/**/render/*
-catalog/
-dh_catalog/
-chartsrepo/
-.cr-index/
-website/
-pub/
-tgz_cache/
-index_cache/
+#charts/**/charts/*.tgz
+#charts/**/render/*
+#catalog/
+#dh_catalog/
+#chartsrepo/
+# .cr-index/
+# tgz_cache/
+# index_cache/
 helm/
 node_modules/
