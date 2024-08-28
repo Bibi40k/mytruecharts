@@ -1,0 +1,52 @@
+image:
+  repository: ghcr.io/taxel/plextraktsync
+  tag: 0.31.9@sha256:f38dd7c31c07de4c099abea125bf7c443168c3f388f1f3a2c84a4e0adc48cffd
+  pullPolicy: IfNotPresent
+
+securityContext:
+  container:
+    runAsNonRoot: false
+    readOnlyRootFilesystem: false
+    runAsUser: 0
+    runAsGroup: 0
+
+service:
+  main:
+    enabled: false
+    ports:
+      main:
+        enabled: false
+
+plextraktsync:
+  cron_enabled: true
+  task: ""
+  schedule: "0 */6 * * *"
+
+cronjob:
+  annotations: {}
+  failedJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: 2
+
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          tty: true
+          stdin: true
+          probes:
+            liveness:
+              enabled: false
+            readiness:
+              enabled: false
+            startup:
+              enabled: false
+
+persistence:
+  config:
+    enabled: true
+    mountPath: /app/config
+
+portal:
+  open:
+    enabled: false

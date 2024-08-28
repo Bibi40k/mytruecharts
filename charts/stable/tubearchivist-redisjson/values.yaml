@@ -1,0 +1,23 @@
+image:
+  pullPolicy: IfNotPresent
+  repository: redislabs/rejson
+  tag: latest@sha256:3eeb305aaa32fc7952a787b531ffd3a2ae4f2652d65f3ce6edf0572c49c01038
+persistence:
+  data:
+    enabled: true
+    mountPath: /data
+portal:
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsGroup: 0
+    runAsUser: 0
+service:
+  main:
+    ports:
+      main:
+        port: 6379
+        protocol: tcp
+        targetPort: 6379

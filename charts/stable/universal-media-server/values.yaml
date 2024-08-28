@@ -1,0 +1,42 @@
+image:
+  pullPolicy: IfNotPresent
+  repository: universalmediaserver/ums
+  tag: latest@sha256:e4ec42f85d4c6e1f8dcfab0c4b953f3046baa1b1485720edcfacbcc05284bc9f
+persistence:
+  config:
+    enabled: true
+    mountPath: /root/.config/UMS/
+  media:
+    enabled: true
+    mountPath: /media
+portal:
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsGroup: 0
+    runAsUser: 0
+service:
+  api:
+    enabled: true
+    ports:
+      api:
+        enabled: true
+        port: 5001
+        protocol: tcp
+        targetPort: 5001
+  main:
+    ports:
+      main:
+        port: 9001
+        protocol: http
+        targetPort: 9001
+  sub:
+    enabled: true
+    ports:
+      sub:
+        enabled: true
+        port: 1044
+        protocol: tcp
+        targetPort: 1044
